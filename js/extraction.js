@@ -1,6 +1,6 @@
 import { registerFileAction, FileAction, Permission, DefaultType } from '@nextcloud/files'
 
-//window.addEventListener('DOMContentLoaded', () => {
+window.addEventListener('DOMContentLoaded', () => {
 
 	//if (!OCA.Files || !OCA.Files.fileActions) {
 	//	return;
@@ -61,4 +61,4 @@ import { registerFileAction, FileAction, Permission, DefaultType } from '@nextcl
 		}
 	}
 
-//});
+});
