@@ -10,9 +10,14 @@
 return [
     'routes' => [
        [
-            'name' => 'extraction#extract',
-            'url'  => 'ajax/extract.php',
-            'verb' => 'POST'
-        ],
+          'name' => 'extraction#extract',
+          'url'  => 'ajax/extract.php',
+          'verb' => 'POST'
+       ],
+       [
+        'name' => 'extraction#test',
+        'url'  => 'test',
+        'verb' => 'GET'
+       ],
     ]
 ];

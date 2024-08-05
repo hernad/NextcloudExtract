@@ -103,7 +103,7 @@ class ExtractionController extends Controller {
 		if($tmpPath){
 			$tmpFolder = $this->rootFolder->get($tmpPath);
 			$tmpFolder->move($this->userFolder->getFullPath($NCDestination));
-		}else{
+		} else {
 			// This seems to be enough to trigger a files-cache refresh
 			$this->userFolder->get($NCDestination);
 		}
@@ -172,7 +172,7 @@ class ExtractionController extends Controller {
 
 					// remove .tar file
 					unlink($file);
-				}else{
+				} else{
 					$response = $this->extractionService->extractOther($file, $fileName, $extractTo);
 				}
 				break;
@@ -181,5 +181,11 @@ class ExtractionController extends Controller {
 		$this->postExtract($fileName, $directory, $extractTo, $tmpPath);
 
 		return new DataResponse($response);
+	}
+
+	public function test() {
+		return new DataResponse(
+			['message' => 'Hello world!']
+		);
 	}
 }

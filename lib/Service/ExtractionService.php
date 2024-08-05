@@ -48,7 +48,7 @@ class ExtractionService {
 	public function extractZip($file, $filename, $extractTo){
 		$response = array();
 
-		if (!extension_loaded("zip")){
+		if (!extension_loaded("zip")) {
 			$response = array_merge($response, array("code" => 0, "desc" => $this->l->t("Zip extension is not available")));
 			return $response;
 		}

@@ -39,7 +39,7 @@ class Application extends App  implements IBootstrap {
 	// Called later than "register".
 	public function boot(IBootContext $context): void {
 		$context->injectFn(function(IEventDispatcher $dispatcher) {
-			Util::addScript($this->appName, 'extraction' );
+			Util::addScript($this->appName, 'extract-main' );
 			Util::addStyle($this->appName, 'style' );
 		});
 	}
